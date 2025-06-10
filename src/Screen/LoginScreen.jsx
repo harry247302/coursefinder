@@ -65,7 +65,21 @@ export default function LoginScreen() {
     <div className="flex min-h-screen justify-center items-center bg-gray-100">
       <div className="w-full  bg-white shadow-lg  overflow-hidden ">
         {/* Left Side: Login Form */}
-        <section className="relative w-full  flex flex-col">
+
+            <nav className="relative  z-10 8 w-full shadow-md px-6 py-2 text-white font-semibold ">
+            <div className="max-w-7xl mx-auto flex items-center justify-between">
+              <span className=""> 
+                <img src={SearchMyStudy} className='w-[200px]' alt="" />
+              </span>
+              {/* <ul className="flex gap-6 text-sky-500">
+                <li><a href="#" className="hover:underline">Home</a></li>
+                <li><a href="#" className="hover:underline">About</a></li>
+                <li><a href="#" className="hover:underline">Contact</a></li>
+              </ul> */}
+            </div>
+          </nav>
+
+        <section className="my-8 relative w-full  flex flex-col">
           {/* Background Image */}
           <img
             src={loginbg}
@@ -88,19 +102,7 @@ export default function LoginScreen() {
           ></div>
 
           {/* Navbar */}
-          <nav className="relative z-10 w-full  to-sky-300 px-6 py-2 text-white font-semibold shadow-lg">
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
-              <span className=""> 
-                <img src={SearchMyStudy} className='w-[200px]' alt="" />
-              </span>
-              <ul className="flex gap-6">
-                <li><a href="#" className="hover:underline">Home</a></li>
-                <li><a href="#" className="hover:underline">About</a></li>
-                <li><a href="#" className="hover:underline">Contact</a></li>
-              </ul>
-            </div>
-          </nav>
-
+      
           {/* Main Content */}
           <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between   w-full max-w-7xl mx-auto text-white flex-1">
             {/* Text Section */}
@@ -124,8 +126,8 @@ export default function LoginScreen() {
         </section>
 
 
-        <div className='mt-10'>
-          <h1 className='text-3xl font-bold text-center text-sky-500'>Great tools and features for Edugo Abroad Partners all at one place!</h1>
+        <div className='mt-[100px]'>
+          <h1 className='text-2xl font-bold text-center text-sky-500'>Great tools and features for Searchmystudy Abroad Partners all at one place!</h1>
           <p className='text-center'>Cut your time and efforts and stay ahead of the competition with these awesome features.</p>
           <section className="px-6 py-10 bg-white grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 
