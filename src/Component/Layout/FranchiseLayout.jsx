@@ -148,14 +148,19 @@ export default function PartnerLayout() {
     setOpenSubmenuIndex(openSubmenuIndex === index ? null : index);
   };
 
-  const logoutHandler = async () => {
-    try {
-      await logoutApiCall().unwrap();
-      dispatch(logout());
-    } catch (err) {
-      console.log('Error', err);
-    }
-  };
+ const logoutHandler = async () => {
+  const isConfirmed = window.confirm("Are you sure you want to logout?");
+  if (!isConfirmed) return;
+
+  try {
+    await logoutApiCall().unwrap();
+    dispatch(logout());
+    window.location.reload();
+  } catch (err) {
+    console.log('Error', err);
+  }
+};
+
 
   const handleSearch = (event) => {
     const value = event.target.value.toLowerCase();

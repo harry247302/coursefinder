@@ -23,6 +23,7 @@ const Form = () => {
     if (isSuccess) {
       toast.success("Login success!")
       navigate('/redirect');
+      window.location.reload();
     }
   }, [navigate, userInfo]);
 
